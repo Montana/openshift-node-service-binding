@@ -538,7 +538,7 @@ def check_secret_key(context, secret_name, key):
 @given('Secret "{secret_name}" is empty')
 @then('Secret "{secret_name}" is empty')
 def validate_secret_empty(context, secret_name):
-    openshift = Openshift()
+    openshift = OpenShift()
     try:
         polling2.poll(
             lambda: json.loads(
